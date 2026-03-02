@@ -8,7 +8,7 @@ public class ProofOfWork {
     public static void main(String[] args) throws NoSuchAlgorithmException {
         String nickname = "海阔天空";
         int nonce = 0;
-        String targetPrefix = "00000"; // 设定难度目标：4个零
+        String targetPrefix = "0000"; // 设定难度目标：4个零
 
         long startTime = System.currentTimeMillis();
         MessageDigest digest = MessageDigest.getInstance("SHA-256");
@@ -28,8 +28,8 @@ public class ProofOfWork {
 
                 System.out.println("--- 挖矿成功！ ---");
                 System.out.println("花费时间: " + duration + " 毫秒");
-                System.out.println("输入内容: " + input);
-                System.out.println("Hash 结果: " + hexHash);
+                System.out.println("Hash 内容: " + input);
+                System.out.println("Hash 值: " + hexHash);
                 break;
             }
 
